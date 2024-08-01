@@ -33,7 +33,7 @@ required_colors = [
 
 # 将颜色从十六进制转换为RGB元组
 required_colors_rgb = [tuple(int(color[i:i+2], 16) for i in (1, 3, 5)) for color in required_colors]
-
+os.makedirs(folder_B, exist_ok=True)
 # 遍历文件夹A中的所有PNG文件
 for filename in os.listdir(folder_A):
     if filename.lower().endswith('.png'):
